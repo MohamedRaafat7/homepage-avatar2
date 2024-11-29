@@ -63,6 +63,7 @@ h1,
 h2,
 .fw-bold {
     font-weight: 800 !important;
+    font-size: 2rem ;
 }
 
 h3,
