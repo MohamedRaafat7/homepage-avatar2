@@ -6,7 +6,12 @@
     --dark: #091E3E;
 }
 
-
+.text-primary{
+   color: #06a3da !important;
+}
+.bg-primary{
+    background-color: #06a3da !important;
+}
 /*** Spinner ***/
 .spinner {
     width: 40px;
@@ -62,14 +67,15 @@
 h1,
 h2,
 .fw-bold {
-    font-weight: 800 !important;
-    font-size: 2rem ;
+    font-weight: 750 !important;
+    font-size: 1.5rem !important;
 }
 
 h3,
 h4,
 .fw-semi-bold {
     font-weight: 700 !important;
+    font-size: 1.4rem;
 }
 
 h5,
@@ -129,7 +135,7 @@ h6,
     font-family: 'Nunito', sans-serif;
     position: relative;
     margin-left: 25px;
-    padding: 35px 0;
+    padding: 10px 0;
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 600;
@@ -138,7 +144,7 @@ h6,
 }
 
 .sticky-top.navbar-dark .navbar-nav .nav-link {
-    padding: 20px 0;
+    padding: 10px 0;
     color: var(--dark);
 }
 

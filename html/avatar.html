@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar Interview</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/test.css">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #333; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+   
+    border-radius: 15px;
+    
+}
+
+#avatar-display {
+    
+   
+    object-fit: contain;
+}
+
+/* Session Controls */
+.session-controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.session-btn {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.session-btn:hover {
+    opacity: 0.8;
+}
+
+/* Voice Control */
+.voice-control {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: white;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.voice-control:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Chat Input */
+.chat-input-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: black;
+    border-radius: 10px;
+    padding: 10px 15px;
+   
+}
+
+.chat-input {
+    border: none;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    width: 200px;
+}
+
+.chat-send-btn {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.chat-send-btn:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Top Left: Session Controls -->
+        <div class="session-controls">
+            <button class="session-btn" id="end-session">End Session</button>
+            <button class="session-btn" id="start-session">Start New Session</button>
+        </div>
+
+        <!-- Center: Avatar Display -->
+        <div class="avatar-container">
+            <img src="F:\grad\website4\4\img\alex.PNG" alt="Avatar" id="avatar-display" >
+        </div>
+
+       
+
+        <!-- Bottom Right: Chat Input -->
+        <div class="chat-input-container">
+            <div class="chat_list"></div>
+    
+            <form action="#" class="typing_form pb-5">
+                <div class="input_wrapper">
+                    <input type="text" id="speechToText" class="typing_input" placeholder="Message" required>
+                    <button onclick="startVoice()" type="button" class="btn btn-primary rounded-circle">
+                        <i class="fa-solid fa-microphone-lines"></i>
+                    </button>
+                    <button type="submit" class="fa fa-paper-plane"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+   <script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/test.js"></script>
+</body>
+</html>
